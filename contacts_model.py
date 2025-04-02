@@ -4,11 +4,11 @@ import time
 from threading import Thread
 from random import random
 
-
 # ========================================================
 # Contact Model
 # ========================================================
 PAGE_SIZE = 100
+
 
 class Contact:
     # mock contacts database
@@ -109,10 +109,12 @@ class Archiver:
     archive_progress = 0
     thread = None
 
-    def status(self):
+    @staticmethod
+    def status():
         return Archiver.archive_status
 
-    def progress(self):
+    @staticmethod
+    def progress():
         return Archiver.archive_progress
 
     def run(self):
@@ -122,7 +124,8 @@ class Archiver:
             Archiver.thread = Thread(target=self.run_impl)
             Archiver.thread.start()
 
-    def run_impl(self):
+    @staticmethod
+    def run_impl():
         for i in range(10):
             time.sleep(1 * random())
             if Archiver.archive_status != "Running":
@@ -134,10 +137,12 @@ class Archiver:
             return
         Archiver.archive_status = "Complete"
 
-    def archive_file(self):
+    @staticmethod
+    def archive_file():
         return 'contacts.json'
 
-    def reset(self):
+    @staticmethod
+    def reset():
         Archiver.archive_status = "Waiting"
 
     @classmethod
