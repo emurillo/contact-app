@@ -134,5 +134,29 @@
     "phone": null,
     "email": "restexample2@example.com",
     "errors": {}
+  },
+  {
+    "id": 20,
+    "first": "Emilio",
+    "last": "Murillo",
+    "phone": "4166059940",
+    "email": "e_murillo@yahoo.com",
+    "errors": {}
+  },
+  {
+    "id": 21,
+    "first": "Flavia",
+    "last": "Murillo",
+    "phone": "4166050900",
+    "email": "toflavia@yahoo.ca",
+    "errors": {}
+  },
+  {
+    "id": 22,
+    "first": "Lourdes",
+    "last": "Murillo",
+    "phone": "9053416680",
+    "email": "test@test.ca",
+    "errors": {}
   }
 ]

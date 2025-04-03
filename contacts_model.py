@@ -1,8 +1,7 @@
 import json
-from operator import attrgetter
 import time
-from threading import Thread
 from random import random
+from threading import Thread
 
 # ========================================================
 # Contact Model
